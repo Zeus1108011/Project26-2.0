@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 26</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>Project 26</h1>
+          <p class="hero-text">
+            “It is not death that a man should fear, but he should fear never
+            beginning to live.” - Marcus Aurelius
+          </p>
+        </div>
+
+        <div class="hero-card">
+          <p class="balance-label">Balance</p>
+          <p id="balance" class="hero-card-value">$0.00</p>
+          <button id="reset-save-button" class="ghost-button balance-reset" type="button">
+            Reset Save
+          </button>
+        </div>
+      </section>
+
+      <section id="stats" class="stats-grid" aria-label="Project 26 stats"></section>
+
+      <section class="panel">
+        <div class="clock-grid">
+          <article class="clock-card">
+            <p id="clock-date" class="stat-value">-</p>
+          </article>
+        </div>
+      </section>
+
+      <details class="panel collapsible">
+        <summary class="panel-summary">
+          <div>
+            <h2>Income</h2>
+          </div>
+        </summary>
+        <div class="panel-body">
+          <div id="activity-groups" class="group-stack"></div>
+        </div>
+      </details>
+
+      <details class="panel collapsible">
+        <summary class="panel-summary">
+          <div>
+            <h2>Shop</h2>
+          </div>
+        </summary>
+        <div class="panel-body">
+          <div id="reward-grid" class="card-grid"></div>
+        </div>
+      </details>
+
+      <details class="panel collapsible">
+        <summary class="panel-summary">
+          <div>
+            <h2>Factories and Farms</h2>
+          </div>
+        </summary>
+        <div class="panel-body">
+          <div id="asset-groups" class="group-stack"></div>
+        </div>
+      </details>
+
+      <details class="panel collapsible">
+        <summary class="panel-summary">
+          <div>
+            <h2>Sell</h2>
+          </div>
+        </summary>
+        <div class="panel-body">
+          <div id="sell-grid" class="card-grid"></div>
+        </div>
+      </details>
+
+      <details class="panel collapsible">
+        <summary class="panel-summary">
+          <div>
+            <h2>Resource overview</h2>
+          </div>
+        </summary>
+        <div class="panel-body">
+          <div class="table-wrap">
+            <table class="inventory-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Quantity</th>
+                  <th>Production / Month</th>
+                  <th>Usage / Month</th>
+                  <th>Net Total</th>
+                  <th>Sell Price</th>
+                </tr>
+              </thead>
+              <tbody id="inventory-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+
+      <details class="panel history-panel collapsible">
+        <summary class="panel-summary">
+          <div>
+            <h2>History</h2>
+          </div>
+        </summary>
+        <div class="panel-body">
+          <div class="history-actions">
+            <button id="clear-history-button" class="ghost-button" type="button">
+              Clear history
+            </button>
+          </div>
+          <div id="history-list" class="history-list"></div>
+        </div>
+      </details>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
